@@ -1,0 +1,79 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b1cae4;
+    color: #333;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #1e3a8a; /* Deep blue */
+    font-size: 4.0em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 1.1em;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+ 
+
+/* Make text slightly responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    p {
+        font-size: 1em;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
+/* ===== Animated Background Dots ===== */
+body {
+    position: relative;
+    overflow: hidden; /* Prevent scrollbars caused by animation */
+}
+
+/* Container for dots */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#ffffff33 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    animation: moveDots 20s linear infinite;
+    opacity: 0.5; /* subtle effect */
+}
+
+/* Keyframes for smooth movement */
+@keyframes moveDots {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
